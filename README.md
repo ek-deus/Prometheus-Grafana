@@ -21,7 +21,7 @@ systemctl disable firewalld.service
 yum install -y iptables-services
  
  # Конфигурация nano /etc/sysconfig/iptables
-
+```
 *filter
 :INPUT ACCEPT [0:0]
 :FORWARD ACCEPT [0:0]
@@ -38,7 +38,7 @@ yum install -y iptables-services
 -A INPUT -j REJECT --reject-with icmp-host-prohibited
 -A FORWARD -j REJECT --reject-with icmp-host-prohibited
 COMMIT
- 
+ ```
  #запускать 
 systemctl restart iptables.service
 systemctl enable iptables.service
