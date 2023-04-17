@@ -1,8 +1,8 @@
 # Prometheus-Grafana
-# Prometheus+Grafana
+
 
  # Запустить контейнер:
-docker-compose -f .[место положение]/docker-compose-monitor.yml up -d
+`docker-compose -f .[место положение]/docker-compose-monitor.yml up -d`
  # Удалить контейнер:
 docker-compose -f /[место положение]/docker-compose-monitor.yml down
  # Перезагрузите контейнер:
