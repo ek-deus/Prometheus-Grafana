@@ -4,21 +4,21 @@
  # Запустить контейнер:
 `docker-compose -f .[место положение]/docker-compose-monitor.yml up -d`
  # Удалить контейнер:
-docker-compose -f /[место положение]/docker-compose-monitor.yml down
+`docker-compose -f /[место положение]/docker-compose-monitor.yml down`
  # Перезагрузите контейнер:
-docker restart id
+`docker restart id`
 
  #Закройте selinux
-setenforce 0
-nano /etc/sysconfig/selinux
+`setenforce 0`
+`nano /etc/sysconfig/selinux`
 
  #Настройка iptables
  # Удалите собственный брандмауэр
-systemctl stop firewalld.service
-systemctl disable firewalld.service
+`systemctl stop firewalld.service`
+`systemctl disable firewalld.service`
  
  # Установить iptables
-yum install -y iptables-services
+`yum install -y iptables-services`
  
  # Конфигурация nano /etc/sysconfig/iptables
 ```
