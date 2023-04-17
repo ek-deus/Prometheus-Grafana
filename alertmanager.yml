@@ -1,0 +1,18 @@
+global:
+     smtp_smarthost: 'smtp.yandex.ru: 25' # 163 сервер
+     smtp_from:'info@ekdeus.me '# Адрес электронной почты
+     smtp_auth_username:'info@ekdeus.me '# Имя пользователя электронной почты, отправившего письмо, которое является вашим адресом электронной почты
+     smtp_auth_password: 'TPP ***' # Пароль электронной почты для отправки электронной почты
+     smtp_require_tls: false # Не выполнять проверку tls
+ 
+route:
+  group_by: ['alertname']
+  group_wait: 10s
+  group_interval: 10s
+  repeat_interval: 10m
+  receiver: live-monitoring
+ 
+receivers:
+- name: 'live-monitoring'
+  email_configs:
+     -to: 'info@ekdeus.me' # Адрес электронной почты
